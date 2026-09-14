@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Warung Mbak Yansy </title>
+</head>
+<body>
+
+    <h1>🥗 Warung Rujak Cingur  🍹🍬</h1>
+    <p>"Rujak, Legen, Snack Anak Komplit"</p>
+    <hr>
+
+    <h2>Menu</h2>
+    <a href="#rujak">Rujak Cingur</a> | 
+    <a href="#es">Es Legen</a> | 
+    <a href="#snack">Snack Anak</a> | 
+    <a href="#kontak">Kontak</a>
+    <hr>
+
+    <h2 id="rujak">MENU RUJAK CINGUR</h2>
+    
+    <h3>Rujak Cingur Biasa - Rp 15.000</h3>
+    <img src="rujak.jpg" alt="Rujak Cingur" width="200">
+    <form onsubmit="kirimWA(event, 'Rujak Cingur Biasa', 15000)">
+        <label>Jumlah Porsi: </label>
+        <input type="number" min="1" value="1">
+        <input type="submit" value="Pesan Sekarang">
+    </form>
+    <hr>
+
+    <h3>Rujak Cingur Komplit - Rp 20.000</h3>
+    <img src="rujakkomplit.jpg" alt="Rujak Komplit" width="200">
+    <form onsubmit="kirimWA(event, 'Rujak Cingur Komplit', 20000)">
+        <label>Jumlah Porsi: </label>
+        <input type="number" min="1" value="1">
+        <input type="submit" value="Pesan Sekarang">
+    </form>
+    <hr>
+
+    <h2 id="es">MENU ES LEGEN</h2>
+
+    <h3>Es Legen Original - Rp 10.000</h3>
+    <img src="legen.jpg" alt="Es Legen" width="200">
+    <form onsubmit="kirimWA(event, 'Es Legen Original', 10000)">
+        <label>Jumlah Gelas: </label>
+        <input type="number" min="1" value="1">
+        <input type="submit" value="Pesan Sekarang">
+    </form>
+    <hr>
+
+    <h3>Es Legen + Tape - Rp 13.000</h3>
+    <img src="legentape.jpg" alt="Es Legen Tape" width="200">
+    <form onsubmit="kirimWA(event, 'Es Legen Tape', 13000)">
+        <label>Jumlah Gelas: </label>
+        <input type="number" min="1" value="1">
+        <input type="submit" value="Pesan Sekarang">
+    </form>
+    <hr>
+
+    <h2 id="snack">SNACK ANAK-ANAK</h2>
+
+    <h3>Chiki Twist - Rp 2.000</h3>
+    <img src="chiki.jpg" alt="Chiki" width="200">
+    <form onsubmit="kirimWA(event, 'Chiki Twist', 2000)">
+        <label>Beli Berapa: </label>
+        <input type="number" min="1" value="1">
+        <input type="submit" value="Beli">
+    </form>
+    <hr>
+
+    <h3>Permen Yupi - Rp 3.000</h3>
+    <img src="yupi.jpg" alt="Yupi" width="200">
+    <form onsubmit="kirimWA(event, 'Permen Yupi', 3000)">
+        <label>Beli Berapa: </label>
+        <input type="number" min="1" value="1">
+        <input type="submit" value="Beli">
+    </form>
+    <hr>
+
+    <h3>Jasuke Cup - Rp 8.000</h3>
+    <img src="jasuke.jpg" alt="Jasuke" width="200">
+    <form onsubmit="kirimWA(event, 'Jasuke Cup', 8000)">
+        <label>Beli Berapa: </label>
+        <input type="number" min="1" value="1">
+        <input type="submit" value="Beli">
+    </form>
+    <hr>
+
+    <h2 id="kontak">KONTAK & ALAMAT</h2>
+    <p>WA: 08xx-xxxx-xxxx</p>
+    <p>Alamat: Jl. Kenjeran No. 123, Surabaya</p>
+    <p>Buka: 10.00 - 21.00 WIB</p>
+
+    <footer>
+        <p>© 2026 Warung Mbak Yansy</p>
+    </footer>
+
+<script>
+function kirimWA(event, nama, harga){
+    event.preventDefault();
+    var jumlah = event.target.querySelector('input[type=number]').value;
+    var total = jumlah * harga;
+    var pesan = "Halo Mbak yansy, saya mau pesan:%0A" 
+                + nama + " sebanyak " + jumlah + "%0A"
+                + "Total: Rp " + total + "%0A"
+                + "Alamat: %0A" 
+                + "Terima kasih";
+    
+    var noWA = "6285847693683"; // <--- GANTI INI NOMOR WA KAMU
+    var link = "https://wa.me/" + 6285847693683 + "?text=" + pesan;
+    window.open(link, '_blank');
+}
+</script>
+</body>
+</html>
