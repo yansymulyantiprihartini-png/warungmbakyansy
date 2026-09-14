@@ -2,88 +2,170 @@
 <html>
 <head>
     <title>Warung Mbak Yansy </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8f0;
+            margin: 0;
+            padding: 15px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #d35400;
+            background-color: #ffeaa7;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #e17055;
+            border-bottom: 2px solid #fab1a0;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #2d3436;
+        }
+        a {
+            text-decoration: none;
+            color: #0984e3;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+        a:hover {
+            color: #d63031;
+        }
+        .menu-box {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        img {
+            border-radius: 10px;
+            margin: 10px 0;
+            border: 2px solid #fab1a0;
+        }
+        input[type=number] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 80px;
+        }
+        input[type=submit] {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        input[type=submit]:hover {
+            background-color: #128C7E;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ffeaa7;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
 
     <h1>🥗 Warung Rujak Cingur  🍹🍬</h1>
-    <p>"Rujak, Legen, Snack Anak Komplit"</p>
+    <p style="text-align:center;">"Rujak, Legen, Snack Anak Komplit"</p>
     <hr>
 
     <h2>Menu</h2>
-    <a href="#rujak">Rujak Cingur</a> | 
-    <a href="#es">Es Legen</a> | 
-    <a href="#snack">Snack Anak</a> | 
-    <a href="#kontak">Kontak</a>
+    <div style="text-align:center;">
+        <a href="#rujak">Rujak Cingur</a> | 
+        <a href="#es">Es Legen</a> | 
+        <a href="#snack">Snack Anak</a> | 
+        <a href="#kontak">Kontak</a>
+    </div>
     <hr>
 
     <h2 id="rujak">MENU RUJAK CINGUR</h2>
     
-    <h3>Rujak Cingur Biasa - Rp 15.000</h3>
-    <img src="foto/rujak.jpg" alt="Rujak" width="200">
-    <form onsubmit="kirimWA(event, 'Rujak', 15000)">
-        <label>Jumlah Porsi: </label>
-        <input type="number" min="1" value="1">
-        <input type="submit" value="Pesan Sekarang">
-    </form>
-    <hr>
+    <div class="menu-box">
+        <h3>Rujak Cingur Biasa - Rp 15.000</h3>
+        <img src="foto/rujak.jpg" alt="Rujak" width="200">
+        <form onsubmit="kirimWA(event, 'Rujak', 15000)">
+            <label>Jumlah Porsi: </label>
+            <input type="number" min="1" value="1">
+            <input type="submit" value="Pesan Sekarang">
+        </form>
+    </div>
 
-    <h3>Rujak Cingur Komplit - Rp 20.000</h3>
-    <img src="foto/rujakcingurkomplit.jpg" alt="Rujak Cingur Komplit" width="200">
-    <form onsubmit="kirimWA(event, 'Rujak Komplit', 20000)">
-        <label>Jumlah Porsi: </label>
-        <input type="number" min="1" value="1">
-        <input type="submit" value="Pesan Sekarang">
-    </form>
-    <hr>
+    <div class="menu-box">
+        <h3>Rujak Cingur Komplit - Rp 20.000</h3>
+        <img src="foto/rujakcingurkomplit.jpg" alt="Rujak Cingur Komplit" width="200">
+        <form onsubmit="kirimWA(event, 'Rujak Komplit', 20000)">
+            <label>Jumlah Porsi: </label>
+            <input type="number" min="1" value="1">
+            <input type="submit" value="Pesan Sekarang">
+        </form>
+    </div>
 
     <h2 id="es">MENU ES LEGEN</h2>
 
-    <h3>Es Legen Original - Rp 10.000</h3>
-    <img src="foto/eslegen.jpg" alt="Es Legen" width="200">
-    <form onsubmit="kirimWA(event, 'Es Legen Original', 10000)">
-        <label>Jumlah Gelas: </label>
-        <input type="number" min="1" value="1">
-        <input type="submit" value="Pesan Sekarang">
-    </form>
-    <hr>
- <h3>Es Campur - Rp 13.000</h3>
-    <img src="foto/escampur.jpg" alt="Es Campur" width="200">
-    <form onsubmit="kirimWA(event, 'Es Campur', 13000)">
-        <label>Jumlah Gelas: </label>
-        <input type="number" min="1" value="1">
-        <input type="submit" value="Pesan Sekarang">
-    </form>
-   
-    <hr>
+    <div class="menu-box">
+        <h3>Es Legen Original - Rp 10.000</h3>
+        <img src="foto/eslegen.jpg" alt="Es Legen" width="200">
+        <form onsubmit="kirimWA(event, 'Es Legen Original', 10000)">
+            <label>Jumlah Gelas: </label>
+            <input type="number" min="1" value="1">
+            <input type="submit" value="Pesan Sekarang">
+        </form>
+    </div>
+    
+    <div class="menu-box">
+        <h3>Es Campur - Rp 13.000</h3>
+        <img src="foto/escampur.jpg" alt="Es Campur" width="200">
+        <form onsubmit="kirimWA(event, 'Es Campur', 13000)">
+            <label>Jumlah Gelas: </label>
+            <input type="number" min="1" value="1">
+            <input type="submit" value="Pesan Sekarang">
+        </form>
+    </div>
 
     <h2 id="snack">SNACK ANAK-ANAK</h2>
 
-    <h3>Chiki Twist - Rp 2.000</h3>
-    <img src="foto/chiki.jpg" alt="Chiki" width="200">
-    <form onsubmit="kirimWA(event, 'Chiki Twist', 2000)">
-        <label>Beli Berapa: </label>
-        <input type="number" min="1" value="1">
-        <input type="submit" value="Beli">
-    </form>
-    <hr>
+    <div class="menu-box">
+        <h3>Chiki Twist - Rp 2.000</h3>
+        <img src="foto/chiki.jpg" alt="Chiki" width="200">
+        <form onsubmit="kirimWA(event, 'Chiki Twist', 2000)">
+            <label>Beli Berapa: </label>
+            <input type="number" min="1" value="1">
+            <input type="submit" value="Beli">
+        </form>
+    </div>
 
-    <h3>Permen Yupi - Rp 3.000</h3>
-    <img src="foto/yupi.jpg" alt="Yupi" width="200">
-    <form onsubmit="kirimWA(event, 'Permen Yupi', 3000)">
-        <label>Beli Berapa: </label>
-        <input type="number" min="1" value="1">
-        <input type="submit" value="Beli">
-    </form>
-    <hr>
+    <div class="menu-box">
+        <h3>Permen Yupi - Rp 3.000</h3>
+        <img src="foto/yupi.jpg" alt="Yupi" width="200">
+        <form onsubmit="kirimWA(event, 'Permen Yupi', 3000)">
+            <label>Beli Berapa: </label>
+            <input type="number" min="1" value="1">
+            <input type="submit" value="Beli">
+        </form>
+    </div>
 
-    <h3>Jasuke Cup - Rp 8.000</h3>
-    <img src="foto/jasuke.jpg" alt="Jasuke" width="200">
-    <form onsubmit="kirimWA(event, 'Jasuke Cup', 8000)">
-        <label>Beli Berapa: </label>
-        <input type="number" min="1" value="1">
-        <input type="submit" value="Beli">
-    </form>
-    <hr>
+    <div class="menu-box">
+        <h3>Jasuke Cup - Rp 8.000</h3>
+        <img src="foto/jasuke.jpg" alt="Jasuke" width="200">
+        <form onsubmit="kirimWA(event, 'Jasuke Cup', 8000)">
+            <label>Beli Berapa: </label>
+            <input type="number" min="1" value="1">
+            <input type="submit" value="Beli">
+        </form>
+    </div>
 
     <h2 id="kontak">KONTAK & ALAMAT</h2>
     <p>WA: 085847693683</p>
@@ -105,8 +187,8 @@ function kirimWA(event, nama, harga){
                 + "Alamat: %0A" 
                 + "Terima kasih";
     
-    var noWA = "6285847693683"; // <--- GANTI INI NOMOR WA KAMU
-    var link = "https://wa.me/" + 6285847693683 + "?text=" + pesan;
+    var noWA = "6285847693683"; 
+    var link = "https://wa.me/" + noWA + "?text=" + pesan; // UDAH DIBENERIN
     window.open(link, '_blank');
 }
 </script>
